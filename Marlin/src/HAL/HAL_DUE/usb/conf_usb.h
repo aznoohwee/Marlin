@@ -89,7 +89,9 @@
 //#define  USB_DEVICE_LOW_SPEED
 
 //! To define a Full speed device
-//#define USB_DEVICE_FULL_SPEED
+#if defined(ARDUINO_SAM_ARCHIM)
+  #define USB_DEVICE_FULL_SPEED
+#endif
 
 #if MB(ARCHIM1)
   #define USB_DEVICE_FULL_SPEED
